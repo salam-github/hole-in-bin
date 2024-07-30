@@ -12,10 +12,16 @@ A buffer overflow occurs when more data is written to a buffer than it can hold.
 
 #### How Buffer Overflow Works
 
+![Buffer Overflow](./images/buffer_overflow.png)
+
 1. **Buffer Allocation**: In many programs, buffers are used to store data temporarily. If the buffer is not properly bounded, writing more data than the buffer can hold will overflow into adjacent memory.
 2. **Overwriting Memory**: When a buffer overflow occurs, the data written beyond the buffer can overwrite important data such as function pointers, return addresses, or other variables.
 3. **Controlling Execution Flow**: By carefully crafting the overflow data, an attacker can overwrite the return address on the stack. This allows the attacker to control where the program jumps when the current function returns.
 4. **Injecting Payloads**: The attacker can include shellcode or other malicious payloads in the overflow data, which can then be executed when the execution flow is redirected.
+
+In the image above:
+- Before overflow, the stack contains function arguments, return address, base pointer (ebp), and local variables.
+- After overflow, the return address is overwritten with the address of a "jmp esp" instruction, redirecting execution to the shellcode placed earlier in the buffer.
 
 #### Types of Buffer Overflows
 
@@ -65,3 +71,8 @@ Each exercise directory contains:
 - **images**: (Optional) Images illustrating the steps and outputs during the exploitation process.
 
 ---
+
+## Structure
+
+Here's an overview of the directory structure for the project:
+
