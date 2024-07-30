@@ -72,6 +72,13 @@ This section contains links to detailed walkthroughs for each exercise. Each exe
 - [ex02](./ex02/README.md): Exploiting an environment variable-based buffer overflow.
 - [ex03](./ex03/README.md): Changing code flow by overwriting function pointers using a buffer overflow.
 - [ex04](./ex04/README.md): [Description of ex04 exercise and its objective.]
+- [ex05](./ex05/README.md): [Description of ex05 exercise and its objective.]
+- [ex06](./ex06/README.md): [Description of ex06 exercise and its objective.]
+- [ex07](./ex07/README.md): [Description of ex07 exercise and its objective.]
+- [ex08](./ex08/README.md): [Description of ex08 exercise and its objective.]
+- [ex09](./ex09/README.md): [Description of ex09 exercise and its objective.]
+- [ex10](./ex10/README.md): [Description of ex10 exercise and its objective.]
+- [ex11](./ex11/README.md): [Description of ex11 exercise and its objective.]
 
 Each exercise directory contains:
 
