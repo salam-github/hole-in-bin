@@ -27,5 +27,10 @@ Python can be used to craft payloads for exploitation due to its capabilities in
 - [Binary Exploitation Resources](https://github.com/kevinweaver/awesome-binary-exploitation)
 
 ---
+## Exercises
 
-
+- [ex00](./ex00/README.md)
+- [ex01](./ex01/README.md)
+- [ex02](./ex02/README.md)
+- [ex03](./ex03/README.md)
+- [ex04](./ex04/README.md)
