@@ -222,6 +222,7 @@ Include the Python script used to generate the payload:
 
 ```python
 import struct
+```
 
 buffer_size = 64  # 0x40 in hex
 target_value = 0x61626364  # "abcd" in ASCII
