@@ -71,8 +71,3 @@ Each exercise directory contains:
 - **images**: (Optional) Images illustrating the steps and outputs during the exploitation process.
 
 ---
-
-## Structure
-
-Here's an overview of the directory structure for the project:
-
