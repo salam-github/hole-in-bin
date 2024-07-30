@@ -46,6 +46,15 @@ Python can be used to craft payloads for exploitation due to its capabilities in
 - **Handling Binary Data**: Python's `struct` module allows for easy manipulation and packing of binary data, which is crucial for creating payloads that need to overwrite specific memory addresses. This capability makes Python an ideal choice for crafting precise exploitation payloads.
 - **Scripting Repetitive Tasks**: Many exploitation tasks involve repetitive steps that can be efficiently automated with Python scripts. This includes tasks such as sending payloads, parsing responses, and performing memory calculations.
 
+### Exploitation Methodology: 32-bit Stack-based Buffer Overflow
+
+In this series of exercises, we focus on 32-bit stack-based buffer overflows. Here's an overview of how this exploitation technique works:
+
+1. **Identifying the Vulnerability**: The first step is to identify functions that are susceptible to buffer overflow, such as `gets` or `strcpy`. These functions do not perform bounds checking, which can lead to buffer overflows if the input exceeds the buffer size.
+2. **Analyzing the Stack**: Using tools like GDB, we disassemble the binary and analyze the stack to understand the memory layout. We determine the size of the buffer and the offset to critical data such as the return address.
+3. **Crafting the Payload**: We use Python to create a payload that overflows the buffer. The payload typically consists of a sequence of 'A' characters to fill the buffer, followed by a new return address or shellcode.
+4. **Triggering the Overflow**: By providing the crafted payload as input to the vulnerable function, we overwrite the return address or other control data on the stack. This allows us to redirect the execution flow or execute arbitrary code.
+
 ### Resources
 
 - [Buffer Overflow Exploitation](https://www.exploit-db.com/docs/english/28476-linux-format---understanding-buffer-overflows.pdf): A comprehensive guide on understanding and exploiting buffer overflows.
