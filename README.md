@@ -67,7 +67,6 @@ This section contains links to detailed walkthroughs for each exercise. Each exe
 Each exercise directory contains:
 
 - **README.md**: Detailed steps, explanations, and Python scripts used for the exploitation.
-- **bin**: The binary file to be exploited.
 - **images**: (Optional) Images illustrating the steps and outputs during the exploitation process.
 
 ---
