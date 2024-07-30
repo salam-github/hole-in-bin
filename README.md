@@ -70,6 +70,7 @@ Include the Python script used to generate the payload:
 
 ```python
 import struct
+```
 
 buffer_size = 116
 new_value = 1
