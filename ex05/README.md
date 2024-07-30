@@ -1,4 +1,4 @@
-`# ex05 - Buffer Overflow Exploitation
+# ex05 - Buffer Overflow Exploitation
 
 ## Overview
 The objective of this challenge is to manipulate a binary executable to change the value of a specific variable, ultimately triggering the message "you have hit the target correctly :)".
