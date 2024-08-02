@@ -20,6 +20,7 @@ A buffer overflow occurs when more data is written to a buffer than it can hold.
 4. **Injecting Payloads**: The attacker can include shellcode or other malicious payloads in the overflow data, which can then be executed when the execution flow is redirected.
 
 In the image above:
+
 - Before overflow, the stack contains function arguments, return address, base pointer (ebp), and local variables.
 - After overflow, the return address is overwritten with the address of a "jmp esp" instruction, redirecting execution to the shellcode placed earlier in the buffer.
 
@@ -55,11 +56,22 @@ In this series of exercises, we focus on 32-bit stack-based buffer overflows. He
 3. **Crafting the Payload**: We use Python to create a payload that overflows the buffer. The payload typically consists of a sequence of 'A' characters to fill the buffer, followed by a new return address or shellcode.
 4. **Triggering the Overflow**: By providing the crafted payload as input to the vulnerable function, we overwrite the return address or other control data on the stack. This allows us to redirect the execution flow or execute arbitrary code.
 
+### Heap-based Buffer Overflow
+
+Heap-based buffer overflows occur when the overflow happens in the heap segment of memory, which is used for dynamically allocated memory during program execution. These overflows can corrupt the program's heap data structures, potentially allowing an attacker to overwrite function pointers or other critical data stored in the heap.
+
+#### How Heap-based Buffer Overflow Works
+
+1. **Heap Allocation**: Programs use functions like `malloc` to allocate memory on the heap dynamically.
+2. **Buffer Overflow in Heap**: When more data is written to a heap-allocated buffer than it can hold, the overflow can overwrite adjacent memory blocks or heap management structures.
+3. **Corrupting Heap Data**: The attacker can corrupt heap metadata or other structures to manipulate program execution flow.
+4. **Function Pointer Overwrite**: One common exploitation technique involves overwriting function pointers stored in heap structures, redirecting execution to attacker-controlled code.
+
 ### Resources
 
-- [Buffer Overflow Exploitation](https://www.exploit-db.com/docs/english/28476-linux-format---understanding-buffer-overflows.pdf): A comprehensive guide on understanding and exploiting buffer overflows.
+- [Buffer Overflow Exploitation](https://bugbase.ai/blog/introduction-to-binary-exploitation-exploiting-buffer-overflows): A comprehensive guide on understanding and exploiting buffer overflows.
 - [GDB Debugger](https://www.gnu.org/software/gdb/documentation/): The GNU Project Debugger (GDB) documentation. GDB is an essential tool for analyzing binaries and debugging programs.
-- [Binary Exploitation Resources](https://github.com/kevinweaver/awesome-binary-exploitation): A curated list of resources and tools for binary exploitation.
+- [Binary Exploitation Resources](https://guyinatuxedo.github.io/index.html): A curated list of resources and tools for binary exploitation.
 
 ---
 
