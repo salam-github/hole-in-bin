@@ -130,6 +130,9 @@ data is at 0x93b9008, fp is at 0x93b9050
 level passed
 ```
 
+![Succsess Flag](./images/image.png)
+
+
 ### Conclusion
 
 By analyzing the binary and using trial and error to determine the exact buffer layout and function pointer location, we successfully crafted a payload to redirect execution to the `winner` function, printing "level passed".

